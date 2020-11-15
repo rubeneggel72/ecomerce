@@ -1,21 +1,26 @@
-import React from 'react'
-import ItemCounter from '../components/ItemCounter/ItemCounter'
-import ItemList from '../components/itemList/itemList'
-
+import { useState, useEffect } from 'react';
+import ItemCounter from '../components/itemCounter/ItemCounter'
+import ItemList from '../components/itemList/ItemList'
+import getProductsFromDatabase from '../lib/Database'
 import './Home.css'
 
-function Home({greeting}) 
-    {
-    return (
-            <>
-                <div className="home container">
-               
-                {/* <h2> {greeting} </h2> */}
-                <ItemList/>
-
-                {/* <ItemCounter initial={2} min={1} max={10} onAdd={'camisa'}/> */}
-                </div>
-            </>
-        )
+const Home = () =>{
+    const[products,setProducts]=useState([])
+    useEffect(async()=>{
+        const productsAsJSON=await getProductsFromDatabase()
+        const products=JSON.parse(productsAsJSON)
+        setProducts(products)
+    },[])
+    return (   
+        <div className="Home">   
+        {products.length===0 ? (
+        <div><br/><br/><br/><br/>Cargando....</div>
+        ):(
+        <div className="Home">    
+        <ItemList products={products}/>
+        </div>
+    ) }
+    </div>
+    )        
     }
-export default Home
+export default Home 

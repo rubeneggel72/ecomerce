@@ -1,5 +1,6 @@
 .navbar{
-        height: 100px;
+        height: 120px;
+        display:block
         }
 .cardicon { width:200px;}
 h4{color:orangered;}

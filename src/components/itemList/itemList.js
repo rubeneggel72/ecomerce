@@ -1,25 +1,17 @@
-import React from 'react';
-import Item from '../item/item'
-
-const ItemList = () => {
-
-   
-    function List()  { 
-
-      var rows = []
-      for (var i = 0; i < 10; i++) {
-        
-          rows.push(<Item id={i} />);
-      }
-      return <tbody>{rows}</tbody>;
-    }
-
-  return <>  
-    <div className="App">
-      <h1> ¡Lista de productos!</h1>
-      <List/>
+import React from 'react'
+import Item from '../item/Item'
+const ItemList = ({products}) => {
+  console.log("lista " +products)
+  return (
+    <div id="ItemList">
+    {products.map((product,idx)=>{
+      {console.log(product.name)}
+      return(
+        <Item key={idx} item={product}/>
+      )              
+    })}
     </div>
-  </>
-}
+)}
 
 export default ItemList;
+
