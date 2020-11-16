@@ -3,7 +3,9 @@ import './Item.css'
 const Item = ({item}) => {
   return (
     <div id='Item'>
-        <h6>{item.name}-Precio: $-{item.price}- Cant. {item.stock}</h6>
+        <h6>{item.name}-Precio: $-{item.price}- Cant. {item.stock}-img.{item.img}</h6>
+        <img src={item.img}/>
+        
     </div>
   )
   }
