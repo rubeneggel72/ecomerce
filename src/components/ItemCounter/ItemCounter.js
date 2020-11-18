@@ -1,7 +1,7 @@
 import React,{useState}from 'react'
 import './ItemCounter.css'
 
-const ItemCounter=({initial,min,max,onAdd})=>{
+const ItemCounter=({initial,min,max})=>{
      const [counter, setCounter]=useState(initial)
      
      const decrement=() =>{ (counter>min)?
@@ -13,17 +13,12 @@ const ItemCounter=({initial,min,max,onAdd})=>{
 
    return(  
       <div >
-         <div >
-            <br/>
-            <h3>{onAdd} x </h3>
-            <button className="btn btn-info" onClick={decrement } > - </button>
-            <button className="btn btn-outline-info counter" onClick={decrement } disabled> {counter} </button>
-            <button className="btn btn-info" onClick={increment}> + </button>
-         </div>
-         <br/>
-         <button className="btn btn-primary">Agregar al carrito</button>
-         <br/>    
-      </div>       
-    )
+         <div className="col-lg-12 mt-3">
+					<button className="btn btn-primary btn-lg"onClick={decrement }>-</button>
+					<input className="btn btn-outline-primary btn-lg" value={counter}/>
+					<button className="btn btn-primary btn-lg"onClick={increment}>+</button>
+			</div>
+      </div>    
+   )
  }
  export default ItemCounter

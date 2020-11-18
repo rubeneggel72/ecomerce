@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import ItemCounter from '../components/itemCounter/ItemCounter'
 import ItemList from '../components/itemList/ItemList'
+import ItemDetail from '../components/itemDetail/ItemDetail'
+
 import getProductsFromDatabase from '../lib/Database'
 import './Home.css'
 
@@ -12,12 +14,15 @@ const Home = () =>{
         setProducts(products)
     },[])
     return (   
-        <div className="Home">   
+        <div className="Home">  
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"></link> 
         {products.length===0 ? (
         <div><br/><br/><br/><br/>Cargando....</div>
         ):(
         <div className="Home">    
-        <ItemList products={products}/>
+        {/* <ItemList products={products}/> */}
+        {<ItemDetail products={products} id={4}/> }
+        
         </div>
     ) }
     </div>
