@@ -1,9 +1,11 @@
 
-.item-list-container{ ;
-        }
+#ItemDetail{
+        margin-top:150px;
+}
 
 .item-list-photo{
         max-width: 400px;
           
         }
+
         

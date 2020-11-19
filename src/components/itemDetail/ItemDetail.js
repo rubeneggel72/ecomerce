@@ -2,24 +2,24 @@ import React from 'react'
 import ItemCounter from '../itemCounter/ItemCounter'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './ItemDetail.css'
-const ItemDetail = ({products,id}) => {
+const ItemDetail = ({product}) => {
   
   return (
-    <div class="container item">
+    <div id='ItemDetail' class="container">
       <div class="row">
         <div class="col-md-6 border">
-          <img className='item-photo' src={products[id].img}/>
+          <img className='item-photo' src={product.img}/>
           </div>
         <div className="col-md-6 border ">
-	        <h1 className='itemname text-left'>{products[id].name}</h1>
+	        <h1 className='itemname text-left'>{product.name}</h1>
           <hr />     
-					<h2 className="m-0 p-0 price-pro text-left"><strong> PRECIO : $</strong>{products[id].price} x {products[id].unit}. </h2>
+					<h2 className="m-0 p-0 price-pro text-left"><strong> PRECIO : $</strong>{product.price} x {product.unit}. </h2>
 					<hr/>
 					<h3 className="text-left"><strong>Detalle del producto:</strong></h3>
-					<p className="text-left">{products[id].detail}</p><hr class="m-0 pt-2 mt-2"/>
-					<h3 className="tag-section text-left"><strong>Sección: </strong><a href="">{products[id].grupo}</a></h3>
+					<p className="text-left">{product.detail}</p><hr class="m-0 pt-2 mt-2"/>
+					<h3 className="tag-section text-left"><strong>Sección: </strong><a href="">{product.grupo}</a></h3>
           <hr/>
-					<h3 className="text-left"><strong>Cant:</strong>{<ItemCounter initial={products[id].min} min={products[id].min} max={products[id].stock}/>}</h3>
+					<h3 className="text-left"><strong>Cant:</strong>{<ItemCounter initial={product.min} min={product.min} max={product.stock}/>}</h3>
 					<div className="col-lg-12 mt-3">
             <div className="row">
               <br/>

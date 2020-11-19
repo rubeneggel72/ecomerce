@@ -1,14 +1,19 @@
 import './App.css'
 import NavBar from './components/navbar/NavBar.js'
-import Home from './Home/Home.js'
+import Home from './containers/home/Home.js'
+import ItemDetailContainer from './containers/itemDetailContainer/ItemDetailContainer.js'
 
 function App() {
   return (
-    
     <div className="App">
-    <NavBar />
-    <Home  />
-  </div>
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"></link> 
+      <NavBar/>
+
+      {/* <Contenedores/> */}
+      {/* <Home  /> */}
+      <ItemDetailContainer/>
+
+    </div>
 
   )
 }

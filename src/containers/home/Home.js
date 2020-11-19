@@ -1,18 +1,14 @@
 import { useState, useEffect } from 'react';
-import ItemCounter from '../components/itemCounter/ItemCounter'
-import ItemList from '../components/itemList/ItemList'
-import ItemDetail from '../components/itemDetail/ItemDetail'
-
-import getProductsFromDatabase from '../lib/Database'
+import ItemList from '../../components/itemList/ItemList'
+import getProductFromDatabase from '../../lib/Database'
 import './Home.css'
-
 const Home = () =>{
     const[products,setProducts]=useState([])
     useEffect(async()=>{
-        const productsAsJSON=await getProductsFromDatabase()
-        const products=JSON.parse(productsAsJSON)
+        const products=await getProductFromDatabase(0)
         setProducts(products)
     },[])
+
     return (   
         <div className="Home">  
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"></link> 
@@ -20,9 +16,7 @@ const Home = () =>{
         <div><br/><br/><br/><br/>Cargando....</div>
         ):(
         <div className="Home">    
-        {/* <ItemList products={products}/> */}
-        {<ItemDetail products={products} id={3}/> }
-        
+        {<ItemList products={products}/> }
         </div>
     ) }
     </div>
