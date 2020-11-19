@@ -5,4 +5,10 @@ h6{
     color:rgb(3, 8, 54);
 }
 img{
-    max-width: 100px;}
+    max-width: 250px;}
+
+.ctnItem {
+        width: 300px !important;
+   
+       
+    }

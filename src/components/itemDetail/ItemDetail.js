@@ -19,7 +19,7 @@ const ItemDetail = ({products,id}) => {
 					<p className="text-left">{products[id].detail}</p><hr class="m-0 pt-2 mt-2"/>
 					<h3 className="tag-section text-left"><strong>Sección: </strong><a href="">{products[id].grupo}</a></h3>
           <hr/>
-					<h3 className="text-left">Quantity :{<ItemCounter initial={1} min={1} max={10}/>}</h3>
+					<h3 className="text-left"><strong>Cant:</strong>{<ItemCounter initial={products[id].min} min={products[id].min} max={products[id].stock}/>}</h3>
 					<div className="col-lg-12 mt-3">
             <div className="row">
               <br/>
