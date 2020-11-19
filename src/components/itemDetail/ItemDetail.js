@@ -5,7 +5,7 @@ import './ItemDetail.css'
 const ItemDetail = ({products,id}) => {
   
   return (
-    <div class="container">
+    <div class="container item">
       <div class="row">
         <div class="col-md-6 border">
           <img className='item-photo' src={products[id].img}/>

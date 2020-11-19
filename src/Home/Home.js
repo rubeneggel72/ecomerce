@@ -20,8 +20,8 @@ const Home = () =>{
         <div><br/><br/><br/><br/>Cargando....</div>
         ):(
         <div className="Home">    
-        {/* <ItemList products={products}/> */}
-        {<ItemDetail products={products} id={4}/> }
+        <ItemList products={products}/>
+        {/* {<ItemDetail products={products} id={4}/> } */}
         
         </div>
     ) }
