@@ -8,7 +8,7 @@ import CartIcon from '../carticon/CardIcon'
     <>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="logo">
-      <Button type="button" content='https://raw.githubusercontent.com/rubeneggel72/ecomerce/master/src/img/logo.jpg' path='/'  clase="logo" icon=""/>
+      <Button className="logo" type="button" content='https://raw.githubusercontent.com/rubeneggel72/ecomerce/master/src/img/logo.jpg' path='/' clase="logo" icon=""/>
       
       <h4>e-commerce</h4>
       </div>

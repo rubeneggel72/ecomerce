@@ -4,7 +4,7 @@ export default function GetProductFromDatabase(item){
     return new Promise((resolve)=>{
         setTimeout(()=>{
             item>0? resolve(products[item]):resolve(products) 
-        },3000)
+        },1500)
     })
 }
 
