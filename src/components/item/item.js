@@ -6,10 +6,8 @@ const Item = ({item}) => {
   {console.log('item:'+item.img)}
   {console.log('item id :'+item.id)}
   return (
-    <div class="container ctnItem ">      <br/>
-      
+    <div id="Item" class="container ctnItem ">      <br/>
       <Button content={item.img} path={`/detail/${item.id}`}/>
-      
       <h2 className="text-left"><strong>{item.name}</strong></h2>
       <h5 className="text-left">Precio: ${item.price}  x {item.unit}</h5>
       <h5 className="text-left"> Disponible: {item.stock}  {item.unit}</h5>

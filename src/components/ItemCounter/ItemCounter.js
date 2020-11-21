@@ -13,7 +13,7 @@ const ItemCounter=({initial,min,max})=>{
          setCounter(counter+min):setCounter(counter)}
    
    return(  
-      <div >
+      <div id="ItemCounter">
          <div className="col-lg-12 mt-3">
 					<button className="btn btn-primary btn-lg"onClick={decrement}>-</button>
 					<input className="btn btn-outline-primary btn-lg" value={counter} type="number"/>

@@ -6,15 +6,16 @@ import {Link} from 'react-router-dom'
         {console.log('button content :'+content)}
         {console.log('button path :'+path)}
     return (
-        <Link to={path}>
-            {content.startsWith('http')|| content.startsWith('data')?(
-                <img src={content} alt=""/> ):(          
-                <button className={clase} id='Button' onclick={callback}>{content}
-                <span className={icon}/>
-                </button>
-            )}
-           
-            </Link>  
+        <div id="Button">
+            <Link to={path}>
+                {content.startsWith('http')|| content.startsWith('data')?(
+                    <img src={content} alt="" className={clase}/> ):(          
+                    <button className={clase} id='Button' onclick={callback}>{content}
+                    <span className={icon}/>
+                    </button>
+                )}
+                </Link>  
+            </div>
             )       
     }
 export default Button

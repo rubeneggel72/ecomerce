@@ -5,10 +5,10 @@ import CartIcon from '../carticon/CardIcon'
 
  const NavBar = ()=> {
     return (
-    <>
+    <div id="NavBar">
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="logo">
-      <Button  type="button" content='https://raw.githubusercontent.com/rubeneggel72/ecomerce/master/src/img/logo1.jpg' path='/' clase="logo" icon=""/>
+      <Button className="logo" type="button" content='https://raw.githubusercontent.com/rubeneggel72/ecomerce/master/src/img/logo1.jpg' path='/' clase="logo" icon=""/>
       
       <h4>e-commerce</h4>
       </div>
@@ -45,7 +45,7 @@ import CartIcon from '../carticon/CardIcon'
       </form>
       </div> 
       </nav>
-    </>
+    </div>
 )
 }
 export default NavBar;

@@ -4,7 +4,7 @@ import './Cart.css'
 const Cart = () =>{
 
     return (
-        <div>
+        <div id="Cart">
             <br/><br/><br/><br/><br/><br/>
             <h1>Lista de compras</h1>
         </div>

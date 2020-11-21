@@ -11,14 +11,14 @@ const Home = () =>{
     },[])
 
     return (   
-        <div className="Home">  
+        <div id="Home">  
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"></link> 
         {products.length===0 ? (
         <div><br/><br/><br/><br/>
         <Spinner/>
         <h2>Cargando....</h2></div>
         ):(
-        <div className="Home">    
+        <div> 
         {<ItemList products={products}/> }
         </div>
     ) }
