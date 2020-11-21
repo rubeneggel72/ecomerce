@@ -1,13 +1,13 @@
 import React from 'react'
-import './CardIcon.css'
-import logo from './logo.jpg'
- const Cardicon = ()=> 
+import './CartIcon.css'
+import Button from '../button/Button'
+
+ const CardIcon = ()=> 
     {
     return (
             <>
-                <img src={logo} alt="Logo" ></img>
-                <h4>e-commerce</h4>
+                <Button type="button" content='Carro de Compras ' path='/cart'  clase="btn btn-info btn-lg btn-danger" icon="glyphicon glyphicon-shopping-cart"/>
             </>    
             )       
     }
-export default Cardicon
+export default CardIcon
