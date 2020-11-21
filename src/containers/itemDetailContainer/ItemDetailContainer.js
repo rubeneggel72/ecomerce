@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import {useParams} from 'react-router-dom'
-import GetProductFromDatabase from '../../lib/Database'
+import GetProductFromDatabase from '../../dataBase/Data'
 import ItemDetail from '../../components/itemDetail/ItemDetail'
 import Spinner from '../../components/spinner/Spinner'
 const ItemDetailContainer=()=>{

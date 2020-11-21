@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ItemList from '../../components/itemList/ItemList'
-import getProductFromDatabase from '../../lib/Database'
+import getProductFromDatabase from '../../dataBase/Data'
 import Spinner from '../../components/spinner/Spinner'
 import './Home.css'
 const Home = () =>{
